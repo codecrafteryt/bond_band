@@ -1,0 +1,15 @@
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_instance/src/extension_instance.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+class DependencyInjection {
+  static void init() async {
+    final sharedPreferences = await SharedPreferences.getInstance();
+    Get.lazyPut(() => sharedPreferences, fenix: true);
+    //Get.lazyPut(() => ApiProvider());
+    //Get.lazyPut(() => AuthRepo(apiProvider: Get.find(),),);
+
+    //Get.lazyPut(() => FashionListingController(listingRepo: Get.find(), sharedPreferences: Get.find()), fenix: true);
+    //Get.lazyPut<ImagePickerController>(() => ImagePickerController(), fenix: true);
+  }
+}

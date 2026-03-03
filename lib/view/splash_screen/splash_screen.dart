@@ -1,111 +1,92 @@
-// /*
-//   ---------------------------------------
-//   Project: Braelo Mobile Application
-//   Date: Jun 1, 2024
-//   Author: Ameer Salman
-//   ---------------------------------------
-//   Description: Splash Screen UI and some logic.
-// */
-// import 'dart:async';
-// import 'package:braelo_app/utils/extensions/extentions.dart';
-// import 'package:braelo_app/utils/values/my_color.dart';
-// import 'package:flutter/material.dart';
-// import 'package:flutter_screenutil/flutter_screenutil.dart';
-// import 'package:get/get.dart';
-// import '../../controller/auth_controller/auth_controller.dart';
-// import '../../data/constants.dart';
-// import '../auth/login_screen/login_screen.dart';
-// import '../auth/onboarding_screen/onboarding_screens.dart';
-//
-// class SplashScreen extends StatefulWidget {
-//   const SplashScreen({super.key});
-//
-//   @override
-//   State<SplashScreen> createState() => _SplashScreenState();
-// }
-//
-// class _SplashScreenState extends State<SplashScreen> {
-//   @override
-//   void initState() {
-//     super.initState();
-//    // _checkLoginStatus();
-//     statusCheck();
-//   }
-//
-//   // // Method to check login status and navigate accordingly
-//   // void _checkLoginStatus() {
-//   //   final auth = FirebaseAuth.instance;
-//   //   final user = auth.currentUser;
-//   //
-//   //   if (user != null) {
-//   //     Timer(const Duration(seconds: 5), () => Get.off(() => const HomePages()),
-//   //     );
-//   //   } else {
-//   //     Timer(const Duration(seconds: 5), () => Get.off(() => OnboardingScreen()),
-//   //     );
-//   //   }
-//   // }
-//
-//   statusCheck() {
-//     Timer(const Duration(seconds: 2), () async {
-//       if (
-//       Get.find<AuthController>().sharedPreferences.getBool("firstTimeWalkThrough") ?? true) {
-//         Get.find<AuthController>().sharedPreferences.setBool("firstTimeWalkThrough", false);
-//         Get.offAll(() => OnboardingScreen());
-//       } else {
-//         if (Get.find<AuthController>().sharedPreferences.getString(
-//             Constants.refreshToken) == null || Get.find<AuthController>().sharedPreferences.getString(Constants.refreshToken) == "")
-//         {
-//           Get.offAll(() => const LoginScreen());
-//         } else {
-//           print("my refresh token${Get.find<AuthController>().sharedPreferences.getString(Constants.refreshToken)}");
-//           Get.find<AuthController>().checkSession1();
-//
-//         }
-//       }
-//     });
-//   }
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       backgroundColor: MyColors.primary,
-//       body: Stack(
-//         children: [
-//           Center(
-//             child: Column(
-//               mainAxisAlignment: MainAxisAlignment.center,
-//               children: [
-//                 Padding(
-//                   padding: EdgeInsets.all(10.0.w),
-//                   child: Image.asset(
-//                     'assets/images/logo.png',
-//                     width: 200.w,
-//                   ),
-//                 ),
-//                 20.sbh,
-//                 const CircularProgressIndicator(
-//                   strokeWidth: 5,
-//                   valueColor: AlwaysStoppedAnimation<Color>(
-//                     MyColors.black,
-//                   ),
-//                 ),
-//               ],
-//             ),
-//           ),
-//           const Positioned(
-//             bottom: 150,
-//             left: 0,
-//             right: 0,
-//             child: Text(
-//               "Version: 1.0.2",
-//               textAlign: TextAlign.center,
-//               style: TextStyle(
-//                 color: MyColors.black,
-//               ),
-//             ),
-//           ),
-//         ],
-//       ),
-//     );
-//   }
-// }
+/*
+  ---------------------------------------
+  Project: Bond Band Mobile Application
+  Date: March 03, 2026
+  Author: Ameer Salman
+  ---------------------------------------
+  Description: Splash Screen UI and some logic.
+*/
+import 'package:flutter/material.dart';
+
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
+
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+   // _checkLoginStatus();
+    //statusCheck();
+  }
+
+  // statusCheck() {
+  //   Timer(const Duration(seconds: 2), () async {
+  //     if (
+  //     Get.find<AuthController>().sharedPreferences.getBool("firstTimeWalkThrough") ?? true) {
+  //       Get.find<AuthController>().sharedPreferences.setBool("firstTimeWalkThrough", false);
+  //       Get.offAll(() => OnboardingScreen());
+  //     } else {
+  //       if (Get.find<AuthController>().sharedPreferences.getString(
+  //           Constants.refreshToken) == null || Get.find<AuthController>().sharedPreferences.getString(Constants.refreshToken) == "")
+  //       {
+  //         Get.offAll(() => const LoginScreen());
+  //       } else {
+  //         print("my refresh token${Get.find<AuthController>().sharedPreferences.getString(Constants.refreshToken)}");
+  //         Get.find<AuthController>().checkSession1();
+  //
+  //       }
+  //     }
+  //   });
+  // }
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(),
+    );
+
+    //   Scaffold(
+    //   backgroundColor: MyColors.primary,
+    //   body: Stack(
+    //     children: [
+    //       Center(
+    //         child: Column(
+    //           mainAxisAlignment: MainAxisAlignment.center,
+    //           children: [
+    //             Padding(
+    //               padding: EdgeInsets.all(10.0.w),
+    //               child: Image.asset(
+    //                 'assets/images/logo.png',
+    //                 width: 200.w,
+    //               ),
+    //             ),
+    //             20.sbh,
+    //             const CircularProgressIndicator(
+    //               strokeWidth: 5,
+    //               valueColor: AlwaysStoppedAnimation<Color>(
+    //                 MyColors.black,
+    //               ),
+    //             ),
+    //           ],
+    //         ),
+    //       ),
+    //       const Positioned(
+    //         bottom: 150,
+    //         left: 0,
+    //         right: 0,
+    //         child: Text(
+    //           "Version: 1.0.2",
+    //           textAlign: TextAlign.center,
+    //           style: TextStyle(
+    //             color: MyColors.black,
+    //           ),
+    //         ),
+    //       ),
+    //     ],
+    //   ),
+    // );
+  }
+}
