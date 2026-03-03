@@ -1,3 +1,11 @@
+/*
+  ---------------------------------------
+  Project: Bond Band Mobile Application
+  Date: March 03, 2026
+  Author: Ameer Salman
+  ---------------------------------------
+  Description: main.dart (starting point of app)
+*/
 import 'package:bond_band/view/splash_screen/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
