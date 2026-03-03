@@ -10,6 +10,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../utils/values/my_fonts.dart';
+
 class CustomButton extends StatelessWidget {
   final VoidCallback? onPressed;
   final String text;
@@ -23,8 +25,10 @@ class CustomButton extends StatelessWidget {
   final double? fontSize;
   final String? imagePath;
   final IconData? icon;
+  final IconData? suffixIcon;
   final Color? iconColor;
   final double? iconSize;
+  final FontWeight? fontWeight;
   final bool isLoading; // Added this parameter
 
   const CustomButton({
@@ -37,10 +41,12 @@ class CustomButton extends StatelessWidget {
     this.backgroundColor,
     this.borderRadius,
     this.fontSize,
+    this.fontWeight,
     this.borderColor,
     this.padding,
     this.imagePath,
     this.icon,
+    this.suffixIcon,
     this.iconColor,
     this.iconSize,
     this.isLoading = false, // Set default to false
@@ -97,9 +103,19 @@ class CustomButton extends StatelessWidget {
                 style: TextStyle(
                   color: textColor,
                   fontSize: fontSize ?? 14.sp,
-                  fontWeight: FontWeight.w500,
+                  fontWeight: fontWeight ?? FontWeight.w500,
+                  fontFamily: MyFonts.inter,
                 ),
               ),
+              if (suffixIcon != null)
+                Padding(
+                  padding: EdgeInsets.only(left: 8.0.r),
+                  child: Icon(
+                    suffixIcon,
+                    color: iconColor ?? textColor,
+                    size: iconSize ?? 24.h,
+                  ),
+                ),
             ],
           ),
         ),

@@ -1,0 +1,47 @@
+/*
+  ---------------------------------------
+  Project: Bond Band Mobile Application
+  Date: March 04, 2026
+  Author: Ameer Salman
+  ---------------------------------------
+  Description: Onboarding logic (no repo).
+*/
+
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+class OnboardingController extends GetxController {
+  final PageController pageController = PageController();
+  final RxInt currentPage = 0.obs;
+  static const int totalPages = 4;
+
+  void onPageChanged(int index) {
+    currentPage.value = index;
+  }
+
+  void nextPage() {
+    if (currentPage.value < totalPages - 1) {
+      pageController.nextPage(
+        duration: const Duration(milliseconds: 300),
+        curve: Curves.easeInOut,
+      );
+    } else {
+      _onComplete();
+    }
+  }
+
+  void skip() {
+    _onComplete();
+  }
+
+  void _onComplete() {
+    // TODO: Navigate to next screen (e.g. login/signup or home)
+    // Get.offAll(() => const LoginScreen());
+  }
+
+  @override
+  void onClose() {
+    pageController.dispose();
+    super.onClose();
+  }
+}

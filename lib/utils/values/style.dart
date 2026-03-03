@@ -66,3 +66,18 @@ TextStyle kSize10DarkW400Text = TextStyle(
     fontSize: 10,
     fontFamily: MyFonts.inter
 );
+
+// Splash screen
+TextStyle kSplashTitleText = TextStyle(
+    color: MyColors.white,
+    fontWeight: FontWeight.w700,
+    fontSize: 48,
+    fontFamily: MyFonts.inter
+);
+
+TextStyle kSplashSubtitleText = TextStyle(
+    color: MyColors.white,
+    fontWeight: FontWeight.w600,
+    fontSize: 14,
+    fontFamily: MyFonts.inter
+);

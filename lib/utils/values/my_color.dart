@@ -62,5 +62,8 @@ class MyColors {
   static const Color grayscale90 = Color(0xFF1B1B1B); // rgba(27, 27, 27, 1)
   static const Color grayscale100 = Color(0xFF212121); // rgba(33, 33, 33, 1)
 
+  // Onboarding / CTA button text
+  static const Color onboardingButtonText = Color.fromRGBO(30, 58, 132, 1);
+
   MyColors._();
 }

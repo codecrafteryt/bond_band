@@ -6,7 +6,17 @@
   ---------------------------------------
   Description: Splash Screen UI and some logic.
 */
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:get/get.dart';
+
+import '../../utils/values/my_color.dart';
+import '../../utils/values/my_images.dart';
+import '../../utils/values/style.dart';
+import '../onboarding_screen/onboarding_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -19,74 +29,61 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-   // _checkLoginStatus();
-    //statusCheck();
+    _navigateToOnboarding();
   }
 
-  // statusCheck() {
-  //   Timer(const Duration(seconds: 2), () async {
-  //     if (
-  //     Get.find<AuthController>().sharedPreferences.getBool("firstTimeWalkThrough") ?? true) {
-  //       Get.find<AuthController>().sharedPreferences.setBool("firstTimeWalkThrough", false);
-  //       Get.offAll(() => OnboardingScreen());
-  //     } else {
-  //       if (Get.find<AuthController>().sharedPreferences.getString(
-  //           Constants.refreshToken) == null || Get.find<AuthController>().sharedPreferences.getString(Constants.refreshToken) == "")
-  //       {
-  //         Get.offAll(() => const LoginScreen());
-  //       } else {
-  //         print("my refresh token${Get.find<AuthController>().sharedPreferences.getString(Constants.refreshToken)}");
-  //         Get.find<AuthController>().checkSession1();
-  //
-  //       }
-  //     }
-  //   });
-  // }
+  void _navigateToOnboarding() {
+    Timer(const Duration(seconds: 2), () {
+      Get.off(() => const OnboardingScreen());
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(),
-    );
+      body: Stack(
+        fit: StackFit.expand,
+        children: [
+          Image.asset(
+            MyImages.splashBg,
+            fit: BoxFit.cover,
+          ),
+          SafeArea(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.asset(
+                  MyImages.splashIcon,
+                  width: 250.w,
+                  height: 250.h,
+                ),
+                Transform.translate(
+                  offset: Offset(0, -50),
+                  child: Text(
+                    'Bond Band',
+                    style: kSplashTitleText,
+                  ),
+                ),
+                Transform.translate(
+                  offset: Offset(0, -45),
+                  child: Text(
+                    'FIND YOUR CONNECTION',
+                    style: kSplashSubtitleText,
+                  ),
+                ),
 
-    //   Scaffold(
-    //   backgroundColor: MyColors.primary,
-    //   body: Stack(
-    //     children: [
-    //       Center(
-    //         child: Column(
-    //           mainAxisAlignment: MainAxisAlignment.center,
-    //           children: [
-    //             Padding(
-    //               padding: EdgeInsets.all(10.0.w),
-    //               child: Image.asset(
-    //                 'assets/images/logo.png',
-    //                 width: 200.w,
-    //               ),
-    //             ),
-    //             20.sbh,
-    //             const CircularProgressIndicator(
-    //               strokeWidth: 5,
-    //               valueColor: AlwaysStoppedAnimation<Color>(
-    //                 MyColors.black,
-    //               ),
-    //             ),
-    //           ],
-    //         ),
-    //       ),
-    //       const Positioned(
-    //         bottom: 150,
-    //         left: 0,
-    //         right: 0,
-    //         child: Text(
-    //           "Version: 1.0.2",
-    //           textAlign: TextAlign.center,
-    //           style: TextStyle(
-    //             color: MyColors.black,
-    //           ),
-    //         ),
-    //       ),
-    //     ],
-    //   ),
-    // );
+                Transform.translate(
+                  offset: Offset(0, -20),
+                  child: SpinKitThreeInOut(
+                    color: MyColors.white,
+                    size: 30.r,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
