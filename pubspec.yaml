@@ -55,6 +55,7 @@ dependencies:
   web_socket_channel: ^3.0.3
   emoji_picker_flutter: ^4.4.0
   intl_phone_number_input: ^0.7.5
+  flutter_screenutil: ^5.9.3
 
 dev_dependencies:
   flutter_test:
