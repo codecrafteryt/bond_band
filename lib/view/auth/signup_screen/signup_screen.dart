@@ -1,3 +1,12 @@
+/*
+  ---------------------------------------
+  Project: Bond Band Mobile Application
+  Date: March 03, 2026
+  Author: Ameer Salman
+  ---------------------------------------
+  Description: custom card
+*/
+
 // import 'dart:ui';
 //
 // import 'package:braelo_app/controller/auth_controller/auth_controller.dart';

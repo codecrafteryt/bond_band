@@ -1,3 +1,12 @@
+/*
+  ---------------------------------------
+  Project: Bond Band Mobile Application
+  Date: March 03, 2026
+  Author: Ameer Salman
+  ---------------------------------------
+  Description: custom app bar
+*/
+
 import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {

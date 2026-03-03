@@ -1,3 +1,12 @@
+/*
+  ---------------------------------------
+  Project: Bond Band Mobile Application
+  Date: March 03, 2026
+  Author: Ameer Salman
+  ---------------------------------------
+  Description: custom button
+*/
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
