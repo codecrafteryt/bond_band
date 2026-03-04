@@ -45,5 +45,12 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<!-- Camera and Photo Library for permission_handler -->
+	<key>NSCameraUsageDescription</key>
+	<string>Bond Band needs camera access to take profile photos.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Bond Band needs photo library access to choose profile photos.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Bond Band needs permission to save photos to your library.</string>
 </dict>
 </plist>
