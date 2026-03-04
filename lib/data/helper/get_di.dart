@@ -8,7 +8,10 @@
 */
 
 import 'package:bond_band/controller/auth_controller.dart';
+import 'package:bond_band/controller/bio_controller.dart';
 import 'package:bond_band/controller/onboarding_controller.dart';
+import 'package:bond_band/controller/photo_controller.dart';
+import 'package:bond_band/controller/profile_controller.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_instance/src/extension_instance.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -24,6 +27,9 @@ class DependencyInjection {
     Get.lazyPut(() => AuthRepo(apiProvider: Get.find(),),);
 
     Get.lazyPut(() => AuthController(authRepo: Get.find(), sharedPreferences: Get.find()), fenix: true);
-    Get.lazyPut(() => OnboardingController());
+    Get.lazyPut(() => OnboardingController(sharedPreferences: Get.find()), fenix: true);
+    Get.lazyPut(() => PhotoController(sharedPreferences: Get.find()), fenix: true);
+    Get.lazyPut(() => ProfileController(sharedPreferences: Get.find()), fenix: true);
+    Get.lazyPut(() => BioController(sharedPreferences: Get.find()), fenix: true);
   }
 }

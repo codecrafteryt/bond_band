@@ -81,3 +81,25 @@ TextStyle kSplashSubtitleText = TextStyle(
     fontSize: 14,
     fontFamily: MyFonts.inter
 );
+
+// Profile / Tell us about yourself
+TextStyle kProfileTitleText = TextStyle(
+    color: MyColors.loginTitleDark,
+    fontWeight: FontWeight.w600,
+    fontSize: 30,
+    fontFamily: MyFonts.inter
+);
+
+TextStyle kProfileSubtitleText = TextStyle(
+    color: MyColors.loginLegalText,
+    fontWeight: FontWeight.w400,
+    fontSize: 16,
+    fontFamily: MyFonts.inter
+);
+
+TextStyle kProfileLabelText = TextStyle(
+    color: MyColors.loginTitleDark,
+    fontWeight: FontWeight.w600,
+    fontSize: 16,
+    fontFamily: MyFonts.inter
+);

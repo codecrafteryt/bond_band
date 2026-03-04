@@ -12,6 +12,7 @@ import 'package:get/get.dart';
 
 import '../data/repo/auth_repo/auth_repo.dart';
 import '../view/auth/otp_screen/otp_screen.dart';
+import '../view/profile/tell_us_about_yourself_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class AuthController extends GetxController {
@@ -99,8 +100,8 @@ class AuthController extends GetxController {
 
   void verifyOtp() {
     if (!isOtpValid) return;
-    // TODO: call API to verify OTP, then navigate to home
-    Get.back();
+    // TODO: call API to verify OTP
+    Get.off(() => const TellUsAboutYourselfScreen());
   }
 
   void clearOtpFields() {

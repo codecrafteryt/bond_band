@@ -28,7 +28,7 @@ class OnboardingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final controller = Get.find<OnboardingController>();
+    final OnboardingController controller = Get.find<OnboardingController>();
     return Scaffold(
       body: Stack(
         fit: StackFit.expand,

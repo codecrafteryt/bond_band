@@ -29,7 +29,7 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final controller = Get.find<AuthController>();
+    final AuthController controller = Get.find<AuthController>();
     return Scaffold(
       backgroundColor: Colors.white,
       body: Stack(
