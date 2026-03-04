@@ -20,4 +20,8 @@ class MyImages {
   static const String onboarding2 = 'assets/images/onboarding_images/onboarding_2.jpg';
   static const String onboarding3 = 'assets/images/onboarding_images/onboarding_3.jpg';
   static const String onboarding4 = 'assets/images/onboarding_images/onboarding_4.jpg';
+
+  // Auth
+  static const String loginLogo = 'assets/images/login_logo.png';
+  static const String lightIcon = 'assets/images/light_icon.png';
 }

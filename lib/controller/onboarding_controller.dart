@@ -10,6 +10,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../view/auth/login_screen/login_screen.dart';
+
 class OnboardingController extends GetxController {
   final PageController pageController = PageController();
   final RxInt currentPage = 0.obs;
@@ -35,8 +37,7 @@ class OnboardingController extends GetxController {
   }
 
   void _onComplete() {
-    // TODO: Navigate to next screen (e.g. login/signup or home)
-    // Get.offAll(() => const LoginScreen());
+    Get.offAll(() => const LoginScreen());
   }
 
   @override

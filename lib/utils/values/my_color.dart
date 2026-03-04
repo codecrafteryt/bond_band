@@ -65,5 +65,14 @@ class MyColors {
   // Onboarding / CTA button text
   static const Color onboardingButtonText = Color.fromRGBO(30, 58, 132, 1);
 
+  // Login / Auth
+  static const Color loginPrimary = Color.fromRGBO(30, 58, 132, 1);
+  static const Color loginPrimaryLight = Color.fromRGBO(30, 58, 132, 0.05);
+  static const Color loginFieldBg = Color.fromRGBO(244, 246, 250, 1);
+  static const Color loginLegalText = Color.fromRGBO(107, 114, 128, 1);
+  static const Color loginTitleDark = Color.fromRGBO(15, 28, 63, 1);
+  static const Color loginTabInactive = Color.fromRGBO(15, 28, 63, 1);
+  static const Color textFieldHintText = Color.fromRGBO(15, 28, 63, 0.5);
+
   MyColors._();
 }
